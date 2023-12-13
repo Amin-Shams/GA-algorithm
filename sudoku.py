@@ -114,7 +114,7 @@ initial_easy = [
 ]
 
 zero_values = []
-solution = genetic_algorithm(initial_hard, population_size=500, generations=1000, mutation_rate=0.5)
+solution = genetic_algorithm(initial_hard, population_size=50, generations=1000, mutation_rate=0.5)
 print("Sudoku Solution:")
 for row in solution:
     print(row)
