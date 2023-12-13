@@ -1,1 +1,1 @@
-## GA algorithm for sudoku 9*9
+# Genetic Algorithm For Sudoku 9*9
