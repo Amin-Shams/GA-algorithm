@@ -44,8 +44,6 @@ def crossover(parent1, parent2):
     crossover_point = random.randint(1, 8)
     child1 = [row[:crossover_point] + parent2[row_i][crossover_point:] for row_i, row in enumerate(parent1)]
     child2 = [row[:crossover_point] + parent1[row_i][crossover_point:] for row_i, row in enumerate(parent2)]
-    # child1 = parent1[:crossover_point] + parent2[crossover_point:]
-    # child2 = parent2[:crossover_point] + parent1[crossover_point:]
     return copy.deepcopy(child1), copy.deepcopy(child2)
 
 
@@ -116,7 +114,7 @@ initial_easy = [
 ]
 
 zero_values = []
-solution = genetic_algorithm(initial_hard, population_size=50, generations=1000, mutation_rate=0.3)
+solution = genetic_algorithm(initial_hard, population_size=500, generations=1000, mutation_rate=0.5)
 print("Sudoku Solution:")
 for row in solution:
     print(row)
